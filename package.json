@@ -4,7 +4,7 @@
   "description": "Advent of code 2020",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npx copyfiles -e build day*/input build/",
     "start": "node build/index.js",
     "test": "test"
   },
@@ -19,6 +19,8 @@
   "homepage": "https://github.com/pmackcode/aoc-2020#readme",
   "devDependencies": {
     "@types/node": "^14.14.10",
+    "copyfiles": "^2.4.1",
+    "file-loader": "^6.2.0",
     "typescript": "^4.1.2"
   }
 }

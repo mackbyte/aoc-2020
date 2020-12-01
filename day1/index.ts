@@ -1,7 +1,5 @@
-function test() {
-    return 10;
-}
+import part1 from "./part1";
 
-export {
-    test
+export default {
+    part1
 }

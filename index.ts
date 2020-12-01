@@ -1,8 +1,8 @@
-import { test } from './day1'
+import day1 from './day1'
 
 const parts = [
     [
-        test
+        day1.part1
     ]
 ]
 
