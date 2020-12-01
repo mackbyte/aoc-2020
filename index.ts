@@ -2,7 +2,8 @@ import day1 from './day1'
 
 const parts = [
     [
-        day1.part1
+        day1.part1,
+        day1.part2
     ]
 ]
 

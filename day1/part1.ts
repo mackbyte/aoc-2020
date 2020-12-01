@@ -1,13 +1,7 @@
-import {readFileSync} from 'fs';
-import {resolve} from "path";
-
-function getInputLines(): string[] {
-    // Slice to remove trailing empty line
-    return readFileSync(resolve(__dirname, "input"), 'utf8').split("\n").slice(0, -1);
-}
+import { getInputLines } from "../common/inputUtils";
 
 export default function part1(): number {
-    const lines = getInputLines()
+    const lines = getInputLines(1)
 
     let first;
     let second;
