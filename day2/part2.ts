@@ -1,22 +1,13 @@
 import { getInputLines } from "../common/inputUtils";
 import {extractPolicy, Policy} from "./index";
 
-function countLetter(letter, password): number {
-    let count = 0;
-    for(let char of password) {
-        if(char === letter) {
-            count++;
-        }
-    }
-    return count;
-}
-
 function validatePassword(policy: Policy, password: string): boolean {
-    const count = countLetter(policy.letter, password);
-    return count >= policy.min && count <= policy.max
+    let minValid = password[policy.min - 1] === policy.letter;
+    let maxValid = password[policy.max - 1] === policy.letter;
+    return (minValid && !maxValid) || (!minValid && maxValid)
 }
 
-export default function part1(): number {
+export default function part2(): number {
     const lines = getInputLines(2);
 
     let policy, password;
