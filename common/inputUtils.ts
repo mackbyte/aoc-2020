@@ -2,10 +2,20 @@ import {readFileSync} from 'fs';
 import {resolve} from "path";
 
 function getInputLines(day: number): string[] {
-    // Slice to remove trailing empty line
-    return readFileSync(resolve(__dirname, `../day${day}/input`), 'utf8').split("\n").filter(value => !!value.trim())
+    return readFileSync(resolve(__dirname, `../day${day}/input`), 'utf8')
+        .split("\n")
+        .filter(value => !!value.trim())
 }
 
+function getInputSplitByBlankLines(day: number): string[] {
+    return readFileSync(resolve(__dirname, `../day${day}/input`), 'utf8')
+        .split("\n\n")
+        .filter(value => !!value.trim())
+
+}
+
+
 export {
-    getInputLines
+    getInputLines,
+    getInputSplitByBlankLines
 }
