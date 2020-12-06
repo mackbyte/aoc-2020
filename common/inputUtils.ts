@@ -14,7 +14,6 @@ function getInputSplitByBlankLines(day: number): string[] {
 
 }
 
-
 export {
     getInputLines,
     getInputSplitByBlankLines
