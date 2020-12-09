@@ -13,7 +13,7 @@ export default function part2(): number {
     const groups = getInputSplitByBlankLines(6);
     let total = 0;
     for(let group of groups) {
-        total += countQuestionsEveryoneAnswered(groupQuestionsAnswered(group.trim()));
+        total += countQuestionsEveryoneAnswered(groupQuestionsAnswered(group));
     }
 
     return total;
