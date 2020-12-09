@@ -46,7 +46,7 @@ export class CredentialValidator {
         ],
         [
             "pid",
-            value => /\d{9}/.test(value)
+            value => /^\d{9}$/.test(value)
         ],
         [
             "cid",

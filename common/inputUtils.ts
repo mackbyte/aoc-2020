@@ -7,11 +7,10 @@ function getInputLines(day: number): string[] {
         .filter(value => !!value.trim())
 }
 
-// TODO fix last line having trailing \n - causes day 4 part 2 to give wrong answer
 function getInputSplitByBlankLines(day: number): string[] {
     return readFileSync(resolve(__dirname, `../day${day}/input`), 'utf8')
         .split("\n\n")
-        .filter(value => !!value.trim())
+        .map(value => value.trim())
 }
 
 export {
