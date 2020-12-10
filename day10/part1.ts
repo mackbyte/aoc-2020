@@ -1,15 +1,8 @@
 import {getInputLines} from "../common/inputUtils";
+import {getAdapters} from "./index";
 
 export default function part1(): number {
-    const adapters: number[] = getInputLines(10)
-        .map(adapter => parseInt(adapter))
-        .sort((a, b) => a - b);
-
-    const wallSocket: number = 0;
-    adapters.unshift(wallSocket);
-
-    const myAdapter: number = Math.max(...adapters) + 3;
-    adapters.push(myAdapter);
+    const adapters: number[] = getAdapters()
 
     let oneJolts: number = 0,
         threeJolts: number = 0,
