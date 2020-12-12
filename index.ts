@@ -8,6 +8,7 @@ import day7 from './day7';
 import day8 from './day8';
 import day9 from './day9';
 import day10 from './day10';
+import day11 from './day11';
 
 const parts = [
     [
@@ -49,6 +50,9 @@ const parts = [
     [
         day10.part1,
         day10.part2
+    ],
+    [
+        day11.part1
     ]
 ]
 
