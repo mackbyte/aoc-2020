@@ -1,15 +1,5 @@
 import {getInputLines} from "../common/inputUtils";
-
-const maskRegex = /mask = (.+)/
-const memRegex = /mem\[(\d+)] = (\d+)/
-
-function toDecimal(binary: string): number {
-    return parseInt(binary, 2);
-}
-
-function toBinary(decimal: number): string {
-    return (decimal >>> 0).toString(2).padStart(36, "0");
-}
+import {maskRegex, memRegex, toBinary, toDecimal} from "./index";
 
 function applyMask(binary: string, mask: string): string {
     let result = '';
