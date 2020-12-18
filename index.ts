@@ -77,7 +77,8 @@ const parts = [
         day15.part2
     ],
     [
-        day16.part1
+        day16.part1,
+        day16.part2
     ]
 ]
 
