@@ -48,8 +48,8 @@ class Space {
     }
 
     cycle() {
-        const start = {x: this.min.x - 1, y: this.min.y - 1, z: this.min.z - 1}
-        const end = {x: this.max.x + 1, y: this.max.y + 1, z: this.max.z + 1}
+        const start: Vector3D = {x: this.min.x - 1, y: this.min.y - 1, z: this.min.z - 1}
+        const end: Vector3D = {x: this.max.x + 1, y: this.max.y + 1, z: this.max.z + 1}
         const nextCubes: Map<string, boolean> = new Map<string, boolean>();
 
         for (let z = start.z; z <= end.z; z++) {
